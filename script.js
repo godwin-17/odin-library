@@ -24,15 +24,21 @@ function addBookToLibrary() {
   console.log(myLibrary);
   booksContainer.innerHTML = "";
   displayBook();
+  setDataAttribute();
 }
 
 button.addEventListener("click", addBookToLibrary);
 
 function displayBook() {
   myLibrary.forEach(book => {
-    booksContainer.innerHTML += `${book.title} ${book.author} ${book.pages} ${book.status} </br>`;
+    booksContainer.innerHTML += `<div class="book">${book.title} ${book.author} ${book.pages} ${book.status} <button class="delete">Delete</button> </div>`;
     body.appendChild(booksContainer);
   });
 }
 
-displayBook();
+function setDataAttribute() {
+  const books = document.querySelectorAll(".book");
+  books.forEach((book, index) => {
+    book.dataset.index = index;
+  });
+}
