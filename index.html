@@ -10,17 +10,25 @@
 </head>
 <body>
   <form>
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title">
+    <div class="f-title input">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" placeholder="Title">
+    </div>
+
+    <div class="f-author input">
+      <label for="author">Author</label>
+      <input type="text" name="author" id="author" placeholder="Author">
+    </div>
   
-    <label for="author">Author</label>
-    <input type="text" name="author" id="author">
+    <div class="f-pages input">
+      <label for="pages">Pages</label>
+      <input type="text" name="pages" id="pages" placeholder="Pages">
+    </div>
   
-    <label for="pages">Pages</label>
-    <input type="text" name="pages" id="pages">
-  
-    <label for="status">Status</label>
-    <input type="text" name="status" id="status" list="reading-status">
+    <div class="f-status input">
+      <label for="status">Status</label>
+      <input type="text" name="status" id="status" list="reading-status" placeholder="Status">
+    </div>
 
     <datalist id="reading-status">
       <option value="Not Read"></option>
@@ -28,7 +36,7 @@
       <option value="Completed"></option>
     </datalist>
 
-    <button type="button">Add Book</button>
+    <button type="button" class="add-btn">Add Book</button>
   </form>
 
   <div class="books-container">
