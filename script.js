@@ -42,3 +42,11 @@ function setDataAttribute() {
     book.dataset.index = index;
   });
 }
+
+booksContainer.addEventListener("click", e => {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
+    console.log(e.target.parentElement.dataset.index);
+    myLibrary.splice(e.target.parentElement.dataset.index, 1);
+  }
+});
