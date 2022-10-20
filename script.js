@@ -27,7 +27,7 @@ button.addEventListener("click", addBookToLibrary);
 
 function displayBook() {
   myLibrary.forEach(book => {
-    booksContainer.innerHTML += `<div class="book"> <div class="title">${book.title}</div> <div>${book.author}</div> <div>${book.pages}</div> <div>${book.status}</div> <button class="delete">Delete</button> </div>`;
+    booksContainer.innerHTML += `<div class="book"> <div class="title">${book.title}</div> <div>${book.author}</div> <div>${book.pages}</div> <div class="status">${book.status}</div> <button class="delete">Delete</button> </div>`;
     body.appendChild(booksContainer);
     setDataAttribute();
   });
@@ -45,5 +45,15 @@ booksContainer.addEventListener("click", e => {
     e.target.parentElement.remove();
     console.log(e.target.parentElement.dataset.index);
     myLibrary.splice(e.target.parentElement.dataset.index, 1);
+  }
+});
+
+booksContainer.addEventListener("click", e => {
+  if (e.target.classList.contains("status")) {
+    if (e.target.textContent === "Read") {
+      e.target.textContent = "Not Read";
+    } else if (e.target.textContent === "Not Read") {
+      e.target.textContent = "Read";
+    }
   }
 });
