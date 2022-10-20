@@ -37,7 +37,11 @@ body {
   background-color: #1eaaaa;
   padding: 14px 20px;
   align-self: center;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.9;
 }
+
 
 button.delete {
   background-color: #f44336;
@@ -49,6 +53,7 @@ button.delete {
   align-self: center;
 }
 
+.status:hover,
 button.delete:hover {
   opacity: 1;
 }
