@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #1eaaaa;
+  background-color: #0099ff;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -25,12 +25,16 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: wheat;
+  background-color: #ffffff;
   height: 250px;
   gap: 20px;
   border-radius: 15px;
   margin-top: 10px;
-  
+  transition: box-shadow .3s;
+}
+
+.book:hover {
+  box-shadow: 0 15px 11px rgba(0, 0, 0, 0.2);
 }
 
 .status {
@@ -59,11 +63,12 @@ button.delete:hover {
 }
 
 .title {
-  background-color: #ffffff;
+  background-color: #131313;
   padding: 10px;
   margin-top: -31px;
   border-radius: 15px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 form {
