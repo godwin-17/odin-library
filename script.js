@@ -33,6 +33,7 @@ function displayBook() {
   });
 }
 
+
 function setDataAttribute() {
   const books = document.querySelectorAll(".book");
   books.forEach((book, index) => {
@@ -40,11 +41,13 @@ function setDataAttribute() {
   });
 }
 
+// Delete books
 booksContainer.addEventListener("click", e => {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
     console.log(e.target.parentElement.dataset.index);
     myLibrary.splice(e.target.parentElement.dataset.index, 1);
+    setDataAttribute();
   }
 });
 
