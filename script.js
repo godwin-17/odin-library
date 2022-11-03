@@ -7,11 +7,13 @@ const button = document.querySelector("button");
 const body = document.querySelector("body");
 const booksContainer = document.querySelector(".books-container");
 
-function Book(title, author, pages, status) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages + " pages";
-  this.status = status;
+class Book {
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages + " pages";
+    this.status = status;
+  }
 }
 
 function addBookToLibrary() {
