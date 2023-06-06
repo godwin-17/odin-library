@@ -9,33 +9,43 @@
   <title>Library</title>
 </head>
 <body>
+
+  <div class="main-title">Odin Library</div>
   <form>
-    <div class="f-title input">
-      <label for="title">Title</label>
-      <input type="text" name="title" id="title" placeholder="Title">
-    </div>
-
-    <div class="f-author input">
-      <label for="author">Author</label>
-      <input type="text" name="author" id="author" placeholder="Author">
-    </div>
+    <div class="form-container">
+      <div class="f-title input-field">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" >
+        <div class="error error-title"></div>
+      </div>
   
-    <div class="f-pages input">
-      <label for="pages">Pages</label>
-      <input type="text" name="pages" id="pages" placeholder="Pages">
-    </div>
+      <div class="f-author input-field">
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" required>
+        <div class="error error-author"></div>
+      </div>
+    
+      <div class="f-pages input-field">
+        <label for="pages">Pages</label>
+        <input type="text" name="pages" id="pages" >
+        <div class="error error-pages"></div>
+      </div>
+    
+      <div class="f-status input-field">
+        <label for="status">Status</label>
+        <input type="text" name="status" id="status" list="reading-status" >
+        <div class="error error-status"></div>
+      </div>
   
-    <div class="f-status input">
-      <label for="status">Status</label>
-      <input type="text" name="status" id="status" list="reading-status" placeholder="Status">
+      <datalist id="reading-status">
+        <option value="Not Read"></option>
+        <option value="Read"></option>
+      </datalist>
     </div>
 
-    <datalist id="reading-status">
-      <option value="Not Read"></option>
-      <option value="Read"></option>
-    </datalist>
-
-    <button type="button" class="add-btn">Add Book</button>
+    <div class="btn-container">
+      <button type="button" class="add-btn">Add Book</button>
+    </div>
   </form>
 
   <div class="books-container">
